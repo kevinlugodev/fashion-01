@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-hook',
@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
     NgOptimizedImage
   ],
   templateUrl: './hook.component.html',
-  styleUrl: './hook.component.scss'
+  styleUrl: './hook.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class HookComponent {
 }

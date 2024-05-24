@@ -27,4 +27,11 @@ export class HeaderComponent implements OnInit {
   toggleMenu(): void {
     this.showMenu.set(!this.showMenu());
   }
+
+  scrollTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }

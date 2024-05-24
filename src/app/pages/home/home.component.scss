@@ -1,3 +1,38 @@
 .main {
   padding: 4rem 0;
 }
+
+.tape {
+  display: none;
+
+  @media(min-width: 1480px) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 30px;
+    height: 100%;
+    background-color: var(--black-900);
+    z-index: 99;
+
+    span {
+      display: block;
+      color: var(--beige-100);
+      text-wrap: nowrap;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.hook {
+  &.exclusive {
+    margin-top: 0;
+
+    @media (min-width: 930px) {
+      grid-template-columns: 1fr 1.75fr;
+    }
+  }
+}
