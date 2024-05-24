@@ -45,3 +45,9 @@ a,
 button {
   cursor: pointer;
 }
+
+div,
+figure,
+section {
+  line-height: 0;
+}

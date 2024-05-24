@@ -81,8 +81,8 @@
     }
   }
 
-  @media (min-width: 1560px) {
-    grid-template-columns: 1fr calc(((100vw - 1560px) / 2) + 430px);
+  @media (min-width: 1420px) {
+    grid-template-columns: 1fr calc(((100vw - 1420px) / 2) + 430px);
 
     &__info {
       right: calc(((100vw - var(--max-width)) / 2));
