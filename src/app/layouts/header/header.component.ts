@@ -1,11 +1,14 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { BrowserService } from '@app/core/services/browser.service';
 import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -13,6 +16,7 @@ export class HeaderComponent implements OnInit {
   private readonly browserService: BrowserService = inject(BrowserService);
 
   showMenu = signal(false);
+  headerLight = signal(false);
 
   ngOnInit() {
     if (this.browserService.isNotPlatformBrowser) {
@@ -21,6 +25,10 @@ export class HeaderComponent implements OnInit {
 
     fromEvent(window, 'resize').subscribe(() => {
       this.showMenu.set(false);
+    });
+
+    fromEvent(window, 'scroll').subscribe(() => {
+      this.headerLight.set(window.scrollY >= 200);
     });
   }
 

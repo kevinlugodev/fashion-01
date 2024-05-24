@@ -35,4 +35,25 @@
       grid-template-columns: 1fr 1.75fr;
     }
   }
+
+  &--socials {
+    .hook {
+      &__figure {
+        padding: 3rem 3rem 0 0;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: block;
+          width: calc(100% - 3rem);
+          height: calc(100% - 3rem);
+          background-color: var(--beige-100);
+          z-index: -1;
+        }
+      }
+    }
+  }
 }

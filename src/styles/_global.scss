@@ -72,3 +72,67 @@ p {
     }
   }
 }
+
+.fade-in {
+  opacity: 0;
+  transition: 1s linear;
+
+  &.in-view {
+    opacity: 1;
+  }
+}
+
+.to-bottom {
+  transform: translateY(-5rem);
+  opacity: 0;
+  transition: 1s linear;
+
+  &.in-view {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.to-right {
+  transform: translateX(-5rem);
+  opacity: 0;
+  transition: 1s linear;
+
+  &.in-view {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.to-left {
+  transform: translateX(5rem);
+  opacity: 0;
+  transition: 1s linear;
+
+  &.in-view {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.width-to-right {
+  width: 0 !important;
+  transition: 1s linear;
+  overflow: hidden;
+
+  &.in-view {
+    width: 100% !important;
+  }
+}
+
+.width-to-left {
+  display: block;
+  margin-left: auto;
+  width: 0 !important;
+  transition: 1s linear;
+  overflow: hidden;
+
+  &.in-view {
+    width: 100% !important;
+  }
+}

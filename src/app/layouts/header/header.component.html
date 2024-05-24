@@ -1,7 +1,5 @@
-<div class="message">
-  <span class="fs-11 upper fw-500">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
-</div>
-<header class="header">
+<header class="header"
+        [class.header--light]="headerLight()">
   <div class="header__content mxwd">
     <nav class="nav">
       <a class="button button--link upper">
@@ -19,7 +17,8 @@
     </nav>
     <div class="logo">
       <!--<img class="logo__image">-->
-      <a class="logo__title serif">CAVIARES</a>
+      <a class="logo__title serif"
+         routerLink="/">CAVIARES</a>
     </div>
     <button class="button button--primary button--outline button-toggle"
             aria-label="toggle menu"

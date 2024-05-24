@@ -1,15 +1,3 @@
-.message {
-  height: 32px;
-  padding: 7px 1.5rem;
-  background-color: #dc4026;
-
-  span {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: var(--beige-100);
-  }
-}
 
 .header {
   position: sticky;
@@ -20,10 +8,17 @@
   padding: 1rem 0;
   background-color: var(--beige-100);
   border-bottom: 1px solid var(--black-100);
+  transition: var(--transition-time);
   z-index: 99;
 
   .button-toggle {
     height: 38px;
+  }
+
+  .logo {
+    &__title {
+      font-size: 26px;
+    }
   }
 
   &__content {
@@ -53,6 +48,17 @@
       background: var(--beige-100);
       border-bottom: 1px solid var(--black-100);
       z-index: 9;
+    }
+  }
+
+  &--light {
+    background-color: #fff;
+    height: 50px;
+
+    .nav {
+      &-mobile {
+        top: 50px;
+      }
     }
   }
 
