@@ -1,3 +1,97 @@
 @mixin button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  height: 52px;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  background-color: transparent;
+  border: 1px solid transparent;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-900);
+    transition: var(--transition-time);
+    z-index: 0;
+  }
+
+  span,
+  .bi {
+    line-height: 1;
+    color: var(--beige-100);
+    z-index: 1;
+  }
+
+  span {
+    font-size: 14px;
+    text-wrap: nowrap;
+  }
+
+  .bi {
+    font-size: 19px;
+  }
+
+  &:hover {
+    &::after {
+      background-color: var(--black-950);
+      left: 0;
+    }
+  }
+
+  &--outline {
+    border: 1px solid var(--black-900);
+
+    &::after {
+      width: 0;
+    }
+
+    span,
+    .bi {
+      color: var(--black-900);
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+
+      span,
+      .bi {
+        color: var(--beige-100);
+      }
+    }
+  }
+
+  &--link {
+    height: auto;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+
+    span,
+    .bi {
+      color: var(--black-900);
+    }
+
+    &::after {
+      width: 0;
+      height: 2px;
+    }
+
+    &:hover,
+    .active {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -12,4 +12,8 @@ export class BrowserService {
   get isPlatformBrowser(): boolean {
     return isPlatformBrowser(this.platformId);
   }
+
+  get isNotPlatformBrowser(): boolean {
+    return !isPlatformBrowser(this.platformId);
+  }
 }

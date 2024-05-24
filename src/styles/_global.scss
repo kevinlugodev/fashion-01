@@ -1,16 +1,74 @@
+@import "mixins";
+
 .mxwd {
-  max-width: 1560px;
+  max-width: var(--max-width);
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .serif {
   font-family: "DM Serif Display", sans-serif;
 }
 
-.text {
-  font-family: "Red Hat Display", sans-serif;
+.button {
+  @include button;
 }
 
-.button {
+.upper {
+  text-transform: uppercase;
+}
 
+.fw-500 {
+  font-weight: 500;
+}
+
+span,
+p {
+  &.fs-11 {
+    font-size: 11px;
+  }
+
+  &.fs-12 {
+    font-size: 12px;
+  }
+
+  &.fs-14 {
+    font-size: 14px;
+  }
+
+  &.fs-18 {
+    font-size: 18px;
+  }
+}
+
+.title {
+  font-size: clamp(30px, 8vw, 52px);
+  line-height: 1.25;
+}
+
+.line {
+  &-left,
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+
+  @mixin line {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: var(--black-200);
+  }
+
+  &-left {
+    &::before {
+      @include line;
+    }
+  }
+
+  &-right {
+    &::after {
+      @include line;
+    }
+  }
 }

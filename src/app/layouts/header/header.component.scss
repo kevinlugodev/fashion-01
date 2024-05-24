@@ -1,0 +1,74 @@
+.message {
+  height: 32px;
+  padding: 7px 1.5rem;
+  background-color: #dc4026;
+
+  span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--beige-100);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  padding: 1rem 0;
+  background-color: var(--beige-100);
+  border-bottom: 1px solid var(--black-100);
+  z-index: 99;
+
+  .button-toggle {
+    height: 38px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 100%;
+  }
+
+  .nav,
+  .shop {
+    display: none;
+    gap: 1.5rem;
+  }
+
+  .nav {
+    &-mobile {
+      position: absolute;
+      top: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 1.5rem;
+      width: 100%;
+      background: var(--beige-100);
+      border-bottom: 1px solid var(--black-100);
+      z-index: 9;
+    }
+  }
+
+  @media (min-width: 1140px) {
+    .button-toggle {
+      display: none;
+    }
+
+    .shop {
+      width: 436px;
+      justify-content: flex-end;
+    }
+
+    .nav,
+    .shop {
+      display: flex;
+    }
+  }
+}

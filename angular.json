@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/_styles.scss"
+              "src/styles/_styles.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
