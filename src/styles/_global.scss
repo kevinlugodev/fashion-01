@@ -6,6 +6,10 @@
   padding: 0 1.5rem;
 }
 
+.d-block{
+  display: block;
+}
+
 .serif {
   font-family: "DM Serif Display", sans-serif;
 }
@@ -38,6 +42,11 @@ p {
 
   &.fs-18 {
     font-size: 18px;
+  }
+
+  &.fs-22 {
+    font-size: 22px;
+    line-height: 1.3;
   }
 }
 

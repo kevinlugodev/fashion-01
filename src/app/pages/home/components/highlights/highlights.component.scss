@@ -1,0 +1,32 @@
+.title {
+  margin: 6rem 0 3rem 0;
+  text-align: center;
+}
+
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  &:has(&__item:hover) > :not(:hover) {
+    opacity: .4;
+    filter: grayscale(1);
+  }
+
+  &__item {
+    max-width: 280px;
+    transition: var(--transition-time);
+
+    &__figure {
+      img {
+        width: 100%;
+        height: 380px;
+      }
+    }
+
+    span {
+      margin: 1rem 0 5px 0;
+    }
+  }
+}
