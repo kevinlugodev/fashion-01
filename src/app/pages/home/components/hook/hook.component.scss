@@ -40,8 +40,26 @@
     }
 
     .button {
-      &::after {
+      span::after {
         background-color: var(--beige-100);
+      }
+
+      &--icon {
+        .bi {
+          color: var(--beige-100);
+        }
+      }
+
+      &::before {
+        border: 1px solid var(--beige-100);
+        color: var(--beige-100);
+      }
+
+      &:hover {
+        &::before {
+          background-color: var(--beige-100);
+          color: var(--black-900);
+        }
       }
     }
 
@@ -87,8 +105,26 @@
       }
 
       .button {
-        &::after {
+        span::after {
           background-color: var(--black-900);
+        }
+
+        &--icon {
+          .bi {
+            color: var(--black-900);
+          }
+        }
+
+        &::before {
+          border: 1px solid var(--black-900);
+          color: var(--black-900);
+        }
+
+        &:hover {
+          &::before {
+            background-color: var(--black-900);
+            color: var(--beige-100);
+          }
         }
       }
 

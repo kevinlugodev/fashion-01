@@ -1,6 +1,9 @@
 <app-header/>
 <router-outlet/>
 <app-footer/>
-<div class="cursor"
-     [class]="positions().cursor"
-     [style.transform]="'translate('+positions().x+'px, '+positions().y+'px)'"></div>
+
+@if (!this.isMobile()) {
+  <div class="cursor"
+       [class]="positions().cursor"
+       [style.transform]="'translate('+positions().x+'px, '+positions().y+'px)'"></div>
+}

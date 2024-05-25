@@ -1,0 +1,37 @@
+.footer {
+  margin-top: 6rem;
+  padding: 6rem 0;
+  background-color: var(--beige-100);
+
+  &__row {
+    display: grid;
+    justify-content: center;
+    gap: 1.5rem;
+
+    @media (min-width: 1052px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .button--developer {
+        margin-left: 5px;
+      }
+    }
+
+    .socials,
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+}

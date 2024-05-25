@@ -16,9 +16,20 @@ export class AppComponent implements OnInit {
   private readonly browserService: BrowserService = inject(BrowserService);
 
   positions = signal({ x: 0, y: 0, cursor: 'default' });
+  isMobile = signal(false);
+
+  private readonly devices = [
+    /android/i,
+    /webos/i,
+    /iphone/i,
+    /ipad/i,
+    /ipod/i,
+    /blackberry/i,
+    /windows phone/i
+  ];
 
   ngOnInit() {
-    if (this.browserService.isNotPlatformBrowser) {
+    if (this.browserService.isNotPlatformBrowser || this.isMobileDevice()) {
       return;
     }
 
@@ -30,5 +41,12 @@ export class AppComponent implements OnInit {
         cursor
       })
     });
+  }
+
+  isMobileDevice(): boolean {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any)['opera'];
+    const value: boolean = this.devices.some(dispositivo => dispositivo.test(userAgent));
+    this.isMobile.set(value);
+    return value;
   }
 }

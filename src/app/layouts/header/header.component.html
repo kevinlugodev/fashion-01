@@ -1,17 +1,24 @@
-<header class="header"
-        [class.header--light]="headerLight()">
+<header class="header">
   <div class="header__content mxwd">
     <nav class="nav">
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/">
         <span class="fs-11">Principal</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/sobre-nosotros">
         <span class="fs-11">Sobre nosotros</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/tiendas">
         <span class="fs-11">Tiendas físicas</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/contacto">
         <span class="fs-11">Contacto</span>
       </a>
     </nav>
@@ -26,10 +33,14 @@
       <i class="bi bi-list"></i>
     </button>
     <div class="shop">
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/ecommerce">
         <span class="fs-11">Tienda en línea</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/carrito">
         <span class="fs-11">Carrito</span>
         <i class="bi bi-cart2"></i>
       </a>
@@ -37,22 +48,34 @@
   </div>
   @if (showMenu()) {
     <nav class="nav nav-mobile">
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/">
         <span class="fs-11">Principal</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/sobre-nosotros">
         <span class="fs-11">Sobre nosotros</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/tiendas">
         <span class="fs-11">Tiendas físicas</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/contacto">
         <span class="fs-11">Contacto</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/ecommerce">
         <span class="fs-11">Tienda en línea</span>
       </a>
-      <a class="button button--link upper">
+      <a class="button button--link upper"
+         routerLinkActive="active"
+         routerLink="/carrito">
         <span class="fs-11">Carrito</span>
         <i class="bi bi-cart2"></i>
       </a>
